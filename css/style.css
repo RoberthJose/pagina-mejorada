@@ -30,6 +30,7 @@ body {
   justify-content: space-between;
   padding: 10px 16px;
   background: #000;
+  position: relative; /* Necesario para menú absoluto en móvil */
 }
 
 .logo h1 {
@@ -219,4 +220,90 @@ body {
 .footer p {
   margin-top: 6px;
   color: #555;
+}
+
+/* =========================
+   MENÚ HAMBURGUESA MÓVIL
+========================= */
+.hamburger {
+  display: none; /* Siempre oculto en PC */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* USER-OPTIONS */
+.user-options {
+  display: flex; /* visible en PC */
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  /* Mostrar hamburguesa */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Ocultar menú por defecto */
+  .user-options {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Ajusta según altura del header */
+    right: 16px;
+    background: #000;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+
+  /* Mostrar menú al hacer clic */
+  .user-options.active {
+    display: flex;
+  }
+
+  /* Contenedor central en móvil */
+  .container {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .content {
+    width: 100%;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .block {
+    width: 100%;
+  }
+
+  .sidebar-left,
+  .sidebar-right {
+    width: 100%;
+    border: none;
+    padding: 5px 0;
+  }
 }
