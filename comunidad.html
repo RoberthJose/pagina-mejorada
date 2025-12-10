@@ -10,24 +10,32 @@
 
   <!-- HEADER / NAV -->
   <header class="header">
-    <nav class="navbar">
+    <div class="logo">
+      <h1>craigslist<span>ec</span></h1>
+    </div>
+
+    <!-- HAMBURGUESA SOLO MOVIL -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="navbar" id="nav-menu">
       <a class="nav-link" href="index.html">Inicio</a>
       <a class="nav-link active" href="comunidad.html">Comunidad</a>
       <a class="nav-link" href="vivienda.html">Vivienda</a>
       <a class="nav-link" href="servicios.html">Servicios</a>
       <a class="nav-link" href="trabajo.html">Trabajo</a>
-      <a class="nav-link" href="se-vende.html">Se vende </a>
+      <a class="nav-link" href="se-vende.html">Se vende</a>
       <a class="nav-link" href="foro-debate.html">Foro de debate</a>
       <a class="nav-link" href="ciudades.html">Ciudades</a>
-
     </nav>
-    <h1>Comunidad</h1>
   </header>
 
   <!-- CONTENIDO -->
   <main class="content">
-
-    <section class="section">
+    <section class="section block animated">
       <h2>Actividades</h2>
       <ul>
         <li>grupos</li>
@@ -37,7 +45,7 @@
       </ul>
     </section>
 
-    <section class="section">
+    <section class="section block animated">
       <h2>Personales</h2>
       <ul>
         <li>amistad</li>
@@ -46,7 +54,7 @@
       </ul>
     </section>
 
-    <section class="section">
+    <section class="section block animated">
       <h2>Locales</h2>
       <ul>
         <li>voluntariado</li>
@@ -54,7 +62,6 @@
         <li>clases comunitarias</li>
       </ul>
     </section>
-
   </main>
 
   <!-- FOOTER -->
@@ -66,6 +73,16 @@
     <p>© 2025 craigslist</p>
   </footer>
 
+  <!-- SCRIPT HAMBURGUESA -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    });
+  </script>
+
 </body>
 </html>
-
