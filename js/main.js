@@ -1,11 +1,9 @@
-// ======== MENÚ HAMBURGUESA ========
+// JavaScript para cambiar de sección
+const botones = document.querySelectorAll('.tab-btn');
+const secciones = document.querySelectorAll('.seccion');
 
-// Seleccionamos los elementos del DOM
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-
-// Función para abrir/cerrar el menú
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');  // Muestra u oculta el menú
-  hamburger.classList.toggle('open');  // Animación del icono
-});
+botones.forEach(btn => {
+  btn.addEventListener('click', () => {
+    secciones.forEach(sec => sec.classList.remove('seccion-activa'));
+    document.getElementById(btn.dataset.target).classList.add('seccion-activa');
+  });
