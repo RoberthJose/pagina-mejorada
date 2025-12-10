@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Craigslist EC – Análisis PC</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -15,10 +16,16 @@
     <div class="location">
       <strong>ecuador</strong>
     </div>
-    <div class="user-options">
+    <div class="user-options" id="nav-menu">
       <a href="#">favoritos</a>
       <a href="#">anunciate</a>
       <a href="#">cuenta</a>
+    </div>
+    <!-- HAMBURGUESA MÓVIL -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </header>
 
@@ -29,18 +36,17 @@
     <aside class="sidebar-left">
       <input type="text" placeholder="busca en CL">
 
-      <section class="agenda">
+      <section class="agenda block">
         <h3>agenda de eventos</h3>
-        <!-- calendario solo decorativo -->
       </section>
 
-      <section class="ayuda">
+      <section class="ayuda block">
         <a href="#">ayuda, preguntas, abusos</a>
         <a href="#">evitar estafas/fraudes</a>
         <a href="#">consejos de seguridad</a>
       </section>
 
-      <section class="info">
+      <section class="info block">
         <a href="#">acerca de craigslist</a>
         <a href="#">what's new</a>
         <a href="#">estado del sistema</a>
@@ -50,7 +56,7 @@
     <!-- CONTENIDO CENTRAL -->
     <section class="content">
 
-      <!-- COMUNIDAD -->
+      <!-- BLOQUES CENTRALES -->
       <div class="block">
         <h2>comunidad</h2>
         <ul>
@@ -66,7 +72,6 @@
         </ul>
       </div>
 
-      <!-- VIVIENDA -->
       <div class="block">
         <h2>vivienda</h2>
         <ul>
@@ -80,7 +85,6 @@
         </ul>
       </div>
 
-      <!-- SERVICIOS -->
       <div class="block">
         <h2>servicios</h2>
         <ul>
@@ -96,7 +100,6 @@
         </ul>
       </div>
 
-      <!-- SE VENDE -->
       <div class="block">
         <h2>se vende</h2>
         <ul>
@@ -112,7 +115,6 @@
         </ul>
       </div>
 
-      <!-- FOROS -->
       <div class="block">
         <h2>foros de debate</h2>
         <ul>
@@ -132,7 +134,7 @@
 
     <!-- COLUMNA DERECHA -->
     <aside class="sidebar-right">
-      <section>
+      <section class="block">
         <h3>trabajo</h3>
         <ul>
           <li>administración/oficina</li>
@@ -147,7 +149,7 @@
         </ul>
       </section>
 
-      <section>
+      <section class="block">
         <h3>ciudades</h3>
         <ul>
           <li>quito</li>
@@ -173,20 +175,8 @@
     <a href="#">condiciones</a>
     <p>© 2025 craigslist</p>
   </footer>
-  
-  <!-- SCRIPT HAMBURGUESA -->
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
 
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      hamburger.classList.toggle('open');
-    });
-  </script>
+  <!-- ENLACE AL JS EXTERNO -->
+  <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-
