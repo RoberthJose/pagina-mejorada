@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Craigslist EC – Análisis PC</title>
   <link rel="stylesheet" href="css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -13,23 +12,14 @@
     <div class="logo">
       <h1>craigslist<span>ec</span></h1>
     </div>
-
-    <!-- HAMBURGUESA SOLO MÓVIL -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
     <div class="location">
       <strong>ecuador</strong>
     </div>
-
-    <nav class="user-options" id="nav-menu">
+    <div class="user-options">
       <a href="#">favoritos</a>
       <a href="#">anunciate</a>
       <a href="#">cuenta</a>
-    </nav>
+    </div>
   </header>
 
   <!-- CONTENEDOR PRINCIPAL -->
@@ -41,6 +31,7 @@
 
       <section class="agenda">
         <h3>agenda de eventos</h3>
+        <!-- calendario solo decorativo -->
       </section>
 
       <section class="ayuda">
@@ -59,7 +50,8 @@
     <!-- CONTENIDO CENTRAL -->
     <section class="content">
 
-      <div class="comunidad animated">
+      <!-- COMUNIDAD -->
+      <div class="block">
         <h2>comunidad</h2>
         <ul>
           <li>actividades</li>
@@ -74,22 +66,22 @@
         </ul>
       </div>
 
-      <div class="vivienda animated">
+      <!-- VIVIENDA -->
+      <div class="block">
         <h2>vivienda</h2>
         <ul>
           <li>alquiler de pisos</li>
           <li>bienes raíces</li>
           <li>garaje / trastero</li>
           <li>oficina / comercial</li>
-          <li>intercambio de casas</li>
           <li>piso compartido</li>
-          <li>piso vacaciones</li>
           <li>se busca casa</li>
           <li>se busca habitación</li>
         </ul>
       </div>
 
-      <div class="servicios animated">
+      <!-- SERVICIOS -->
+      <div class="block">
         <h2>servicios</h2>
         <ul>
           <li>animales</li>
@@ -104,7 +96,8 @@
         </ul>
       </div>
 
-      <div class="se-vende animated">
+      <!-- SE VENDE -->
+      <div class="block">
         <h2>se vende</h2>
         <ul>
           <li>antigüedades</li>
@@ -115,11 +108,11 @@
           <li>computadoras</li>
           <li>electrodomésticos</li>
           <li>muebles</li>
-          <li>juegos/juguetes</li>
         </ul>
       </div>
 
-      <div class="foros animated">
+      <!-- FOROS -->
+      <div class="block">
         <h2>foros de debate</h2>
         <ul>
           <li>abierto</li>
@@ -127,10 +120,8 @@
           <li>arte</li>
           <li>dinero</li>
           <li>música</li>
-          <li>joyería</li>
           <li>política</li>
           <li>religión</li>
-          <li>escritura</li>
         </ul>
       </div>
 
@@ -138,7 +129,7 @@
 
     <!-- COLUMNA DERECHA -->
     <aside class="sidebar-right">
-      <section class="trabajo animated">
+      <section>
         <h3>trabajo</h3>
         <ul>
           <li>administración/oficina</li>
@@ -148,12 +139,10 @@
           <li>marketing</li>
           <li>salud</li>
           <li>software</li>
-          <li>recursos humanos</li>
-          <li>venta al por mayor</li>
         </ul>
       </section>
 
-      <section class="ciudades animated">
+      <section>
         <h3>ciudades</h3>
         <ul>
           <li>quito</li>
@@ -161,10 +150,6 @@
           <li>cuenca</li>
           <li>ambato</li>
           <li>manta</li>
-          <li>esmeralda</li>
-          <li>loja</li>
-          <li>riobamba</li>
-          <li>portoviejo</li>
         </ul>
       </section>
     </aside>
@@ -179,7 +164,7 @@
     <a href="#">condiciones</a>
     <p>© 2025 craigslist</p>
   </footer>
-
+  
   <!-- SCRIPT HAMBURGUESA -->
   <script>
     const hamburger = document.getElementById('hamburger');
@@ -190,6 +175,5 @@
       hamburger.classList.toggle('open');
     });
   </script>
-
 </body>
 </html>
