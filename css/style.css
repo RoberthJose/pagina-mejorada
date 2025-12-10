@@ -1,149 +1,155 @@
-/* =========================
-   VARIABLES GLOBALES
-========================= */
-:root {
-  --primary-color: #0047ab; /* azul títulos */
-  --link-color: #0047ab;    /* azul enlaces */
-  --bg-color: #fafafa;      /* fondo general */
-  --text-color: #000;       /* texto negro */
-  --block-bg: #f2f4f7;      /* fondo de cuadros */
-  --block-shadow: none;     /* sin sombra */
-  --transition-speed: 0.3s;
-  --border-radius: 3px;
-  --gap: 20px;
-  --font-base: 'Arial', sans-serif;
-}
-
-/* =========================
-   RESET GENERAL
-========================= */
+/* RESET BÁSICO */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-base);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background: var(--bg-color);
-  color: var(--text-color);
+  background: #ffffff;
+  color: #000;
+}
+
+/* ENCABEZADO */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #551A8B;
+}
+
+.logo span {
   font-size: 14px;
 }
 
-/* =========================
-   HEADER
-========================= */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background: #000;
-  color: #fff;
+.location {
+  font-size: 14px;
 }
 
-.header .logo h1 {
-  font-size: 20px;
-  font-weight: bold;
+.user-options a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #0000EE;
+  font-size: 13px;
 }
 
-.header .logo span {
-  color: var(--link-color);
-}
-
-/* =========================
-   CONTENEDOR PRINCIPAL
-========================= */
+/* CONTENEDOR PRINCIPAL */
 .container {
+  width: 1200px; /* layout fijo */
+  margin: 0 auto;
+  display: flex;
+}
+
+/* SIDEBAR IZQUIERDA */
+.sidebar-left {
+  width: 180px;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  font-size: 13px;
+}
+
+.sidebar-left input {
+  width: 100%;
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+.sidebar-left section {
+  margin-bottom: 15px;
+}
+
+.sidebar-left a {
+  display: block;
+  text-decoration: none;
+  color: #0000EE;
+  margin-bottom: 4px;
+}
+
+/* CONTENIDO CENTRAL */
+.content {
+  width: 700px;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gap);
-  padding: 20px;
-  justify-content: center;
+  gap: 15px;
 }
 
-/* =========================
-   BLOQUES (CUADROS)
-========================= */
 .block {
-  background: var(--block-bg);
-  padding: 10px;
-  border-radius: var(--border-radius);
-  flex: 1 1 200px;
-  min-width: 180px;
+  width: 210px;
 }
 
 .block h2 {
-  color: var(--primary-color);
+  background: #f0f0f0;
+  font-size: 14px;
   font-weight: bold;
-  margin-bottom: 8px;
-  font-size: 13px;
-  padding: 3px 5px;
-  background: #e8ebf0;
-  border-radius: 3px;
+  padding: 4px;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 .block ul {
   list-style: none;
-  padding-left: 5px;
 }
 
-.block ul li {
-  margin-bottom: 5px;
+.block li {
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #0000EE;
+  cursor: pointer;
 }
 
-.block ul li a {
-  color: var(--link-color);
-  text-decoration: none;
-  font-weight: normal;
+/* SIDEBAR DERECHA */
+.sidebar-right {
+  width: 180px;
+  padding: 10px;
+  border-left: 1px solid #ccc;
   font-size: 13px;
 }
 
-.block ul li a:hover {
-  text-decoration: underline;
+.sidebar-right h3 {
+  background: #f0f0f0;
+  padding: 4px;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
-/* =========================
-   PIE DE PÁGINA
-========================= */
+.sidebar-right ul {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.sidebar-right li {
+  font-size: 13px;
+  color: #0000EE;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+/* PIE DE PÁGINA */
 .footer {
-  background: var(--bg-color);
-  color: var(--text-color);
-  padding: 15px 20px;
-  text-align: center;
   border-top: 1px solid #ccc;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
   font-size: 12px;
 }
 
 .footer a {
-  color: var(--link-color);
-  margin: 0 5px;
+  margin: 0 8px;
+  color: #0000EE;
   text-decoration: none;
 }
 
-.footer a:hover {
-  text-decoration: underline;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 1024px) {
-  .container {
-    justify-content: center;
-  }
-  .block {
-    flex: 1 1 45%;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .block {
-    flex: 1 1 100%;
-  }
+.footer p {
+  margin-top: 5px;
+  color: #555;
 }
